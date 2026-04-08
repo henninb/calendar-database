@@ -3,7 +3,7 @@
 # Global variables
 date=$(date '+%Y-%m-%d')
 port=5432
-version=v17-1
+version=v18-3
 username=henninb
 script_name="$(basename "$0")"
 log_file="calendar-db-backup-${date}.log"
@@ -140,7 +140,7 @@ log_msg "Checking command line arguments (received $# arguments)"
 if [ $# -ne 1 ] && [ $# -ne 2 ] && [ $# -ne 3 ]; then
   log_error "Invalid number of arguments"
   echo "Usage: $0 [server] [port] [version]"
-  echo "$0 192.168.10.25 5432 v18-1"
+  echo "$0 postgreshql.bhenning.com 5432 v18-3"
   exit 1
 fi
 

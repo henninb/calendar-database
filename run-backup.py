@@ -11,7 +11,7 @@ from pathlib import Path
 
 DB_NAME = "calendar_db"
 DEFAULT_PORT = 5432
-DEFAULT_VERSION = "v17-1"
+DEFAULT_VERSION = "v18-3"
 USERNAME = "henninb"
 REMOTE_DEST = "raspi:/home/pi/downloads/calendar-db-bkp/"
 
