@@ -16,13 +16,18 @@ USERNAME = "henninb"
 REMOTE_DEST = "raspi:/home/pi/downloads/calendar-db-bkp/"
 
 CSV_EXPORTS = [
-    ("categories",   "SELECT id, name, color, icon, description, is_seeded FROM categories ORDER BY id"),
-    ("credit_cards", "SELECT id, name, issuer, last_four, statement_close_day, grace_period_days, weekend_shift, cycle_days, cycle_reference_date, due_day_same_month, due_day_next_month, annual_fee_month, is_active, created_at, is_seeded FROM credit_cards ORDER BY id"),
-    ("persons",      "SELECT id, name, email FROM persons ORDER BY id"),
-    ("events",       "SELECT id, title, category_id, credit_card_id, rrule, dtstart, dtend_rule, duration_days, description, location, reminder_days, priority, amount, is_active, generates_tasks, gcal_calendar_id, created_at, updated_at, is_seeded FROM events ORDER BY id"),
-    ("occurrences",  "SELECT id, event_id, occurrence_date, status, notes, gcal_event_id, synced_at, created_at FROM occurrences ORDER BY id"),
-    ("tasks",        "SELECT id, occurrence_id, category_id, title, description, status, priority, assignee_id, due_date, estimated_minutes, recurrence, gtask_id, synced_at, parent_task_id, completed_at, created_at, updated_at FROM tasks ORDER BY id"),
-    ("subtasks",     'SELECT id, task_id, title, status, due_date, "order", gtask_id, created_at, updated_at, completed_at FROM subtasks ORDER BY id'),
+    ("categories",        "SELECT id, name, color, icon, description, is_seeded FROM categories ORDER BY id"),
+    ("credit_cards",      "SELECT id, name, issuer, last_four, statement_close_day, grace_period_days, weekend_shift, cycle_days, cycle_reference_date, due_day_same_month, due_day_next_month, annual_fee_month, is_active, created_at, is_seeded FROM credit_cards ORDER BY id"),
+    ("persons",           "SELECT id, name, email FROM persons ORDER BY id"),
+    ("events",            "SELECT id, title, category_id, credit_card_id, rrule, dtstart, dtend_rule, duration_days, description, location, reminder_days, priority, amount, is_active, generates_tasks, gcal_calendar_id, created_at, updated_at, is_seeded FROM events ORDER BY id"),
+    ("occurrences",       "SELECT id, event_id, occurrence_date, status, notes, gcal_event_id, synced_at, created_at FROM occurrences ORDER BY id"),
+    ("tasks",             'SELECT id, occurrence_id, category_id, title, description, status, priority, assignee_id, due_date, estimated_minutes, recurrence, gtask_id, synced_at, parent_task_id, completed_at, created_at, updated_at, "order" FROM tasks ORDER BY id'),
+    ("subtasks",          'SELECT id, task_id, title, status, due_date, "order", gtask_id, created_at, updated_at, completed_at FROM subtasks ORDER BY id'),
+    ("stores",            "SELECT id, name, location, is_active, created_at FROM stores ORDER BY id"),
+    ("grocery_items",     "SELECT id, name, default_unit, default_store_id, created_at FROM grocery_items ORDER BY id"),
+    ("on_hand",           "SELECT id, item_id, quantity, unit, updated_at FROM on_hand ORDER BY id"),
+    ("grocery_lists",     "SELECT id, name, store_id, status, shopping_date, created_at, updated_at FROM grocery_lists ORDER BY id"),
+    ("grocery_list_items","SELECT id, list_id, item_id, quantity, unit, price, status, notes, created_at, updated_at FROM grocery_list_items ORDER BY id"),
 ]
 
 

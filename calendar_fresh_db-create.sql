@@ -154,6 +154,7 @@ CREATE TABLE public.tasks (
     due_date date,
     estimated_minutes integer,
     recurrence character varying DEFAULT 'none'::character varying NOT NULL,
+    "order" integer DEFAULT 0 NOT NULL,
     gtask_id character varying(200),
     synced_at timestamp without time zone,
     parent_task_id integer,
